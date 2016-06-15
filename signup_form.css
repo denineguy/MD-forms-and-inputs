@@ -90,6 +90,10 @@ input {
   vertical-align: top;
 }
 
+/*.name-container {
+  display: block;
+}*/
+
 .input-field {
   position: relative;
   display: block;
