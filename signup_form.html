@@ -7,88 +7,33 @@
   </head>
   <body>
     <div class="container">
-      <!-- <h2>Chisato</h2>
-        <span class="input input--chisato">
-          <input class="input-field input-field--chisato" type="text" id="input-13" />
-          <label class="input-label input-label--chisato" for="input-13">
-            <span class="input-label-content input-label-content--chisato" data-content="First Name">First Name</span>
-          </label>
-        </span> -->
     <h1>Sign Up</h1>
       <form action="">
-        <span class="input">
-          <input id="first-name" type="text" class="name input-field" 
-          required>
-          <label for="first-name" class="input-label">
-            <span class="input-label-content" data-content="First Name">
-              First Name
-            </span>
-          </label>
-        </span>
-        <span class="input">
-          <input id="last-name" type="text" class="name input-field" required>
-          <label for="last-name" class="input-label">
-            <span class="input-label-content" data-content="Last Name">
-              Last Name
-            </span>
-          </label>
-        </span>
-        <span class="name-container input">
-          <input id="birthday" type="date" class="name input-field" required>
-          <label for="birthday" class="input-label">
-            <span class="input-label-content" data-content="Date of Birth">
-              Date of Birth
-            </span>
-          </label>
-        </span>
-        <span class="name-container input">
-          <input id="email" type="email" class="name input-field" required>
-          <label for="email" class="input-label">
-            <span class="input-label-content" data-content="Email Address">
-              Email Address
-            </span>
-          </label>
-        </span>
-        <span class="name-container input">
-          <input id="password" type="password" class="name input-field" required>
-          <label for="password" class="input-label">
-            <span class="input-label-content" data-content="Password">
-              Password
-            </span>
-          </label>
-        </span>
-        <input type="submit" value="Create Account" class="submit">
-
-        <!-- <div class="name_container last_name">
-          <label for="last_name">Last Name:</label>
-          <input id="last_name" type="text" placeholder="last name" class="name" required>
-        </div>
-        <div
-          <label for="email_address">Email Address:</label>
-          <input 
-            id="email_address" 
-            type="email"
-            placeholder="email address"
-            class="email"
-            required>
-        </div>
-        <div
-          <label for="date_of_birth">Date of Birth:</label>
-          <input id="date_of_birth" class="date"
-          type="date" placeholder="date of birth" required>
-        </div> -->
-<!--         <input type="month" placeholder="Month">
-        <input type="day" placeholder="day">
-        <input type="year" placeholder="Year"> -->
-        <!-- <div
-          <label for="password">Password:</label>
-          <input id="password" class="password" type="password" placeholder="password" required>
-        </div>
-        <div
-          <label for="password">Confirm Password:</label>
-          <input id="password" class="password" type="password" placeholder="password" required>
-        </div>
-        <input type="submit" value="Create Account" class="submit"> -->
+      <span>
+        <label class="name">
+          <input type="text" class="input" required />
+          <div class="label-text">First Name</div>
+        </label>
+      </span>
+      <span>
+        <label class="name">
+          <input type="text" class="input" required />
+          <div class="label-text">Last Name</div>
+        </label>
+      </span>
+        <label class="full-width">
+          <input type="text" class="input" required />
+          <div class="label-text">Email Address</div>
+        </label>
+        <label class="full-width">
+          <input type="password" class="input" required />
+          <div class="label-text">Password</div>
+        </label>
+        <label class="full-width">
+          <input type="date" class="input" required placeholder="" />
+          <div class="label-text"></div>
+        </label>
+        <input type="submit" value="Create an Account" class="submit">
       </form>
     </div>
   </body>

@@ -7,7 +7,9 @@
   </head>
   <body>
     <div class="container">
-      <h1>Sign In</h1>
+    <header>
+      <h1>LOGIN TO YOUR ACCOUNT</h1>
+    </header>  
       <form action="">
         <label>
           <input type="email" class="input" required />
@@ -17,9 +19,18 @@
           <input type="password" class="input" required />
           <div class="label-text">Password</div>
         </label>
+        <label class="label-checkbox">
+          <input type="checkbox" class="checkbox"/>
+          <span>Remember me</span>
+        </label>
+        <a href="#" class="password">Forgot your password ?</a>
         <input type="submit" value="LOGIN" class="submit">
       </form>
-      <p>Forgot your password ?</p>
+      <footer class="footer">
+        <span>Don't have an account?
+          <a href="#" class="signup">Sign Up Now</a>
+        </span>
+      </footer>
     </div>
   </body>
 </html>
