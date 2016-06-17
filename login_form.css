@@ -5,7 +5,7 @@ body {
 
 .container {
   background-color: #FFFFFF;
-  box-shadow: 0 0 2px 2px gray;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   left: 50%;
   margin-right: -50%;
   position: absolute;
@@ -15,13 +15,35 @@ body {
 }
 
 h1 {
-  background-color: #480DFF;
+/*  background-color: #480DFF;*/
+  background-color: #484CFF;
   font-size: 20px;
   font-weight: 400;
   margin: 0 0 30px 0;
-  padding: 34px;
+  padding: 20px;
   text-align: center;
   color: #FFFFFF;
+}
+
+header p {
+  padding: 10px;
+}
+
+h2 {
+  border-bottom: 1px solid #484CFF;
+  padding-top: 15px;
+  line-height: 0.1em;
+  margin: 25px auto;
+  text-align: center;
+  width: 77%;
+  color: #484CFF;
+  color: #4F4F4F;
+}
+
+h2 span {
+  background:#fff;
+  padding:0 10px; 
+  font-size: 22px
 }
 
 /* this styles the label */
@@ -42,7 +64,7 @@ label {
 .input {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #480DFF;
+  border-bottom: 1px solid #484CFF;
   color: gray;
   font-size: 20px;
   letter-spacing: -1px;
@@ -55,9 +77,9 @@ label {
 
 .input:focus {
   width: 90%;
-  border-bottom: 4px solid #480DFF;
-  background: linear-gradient(top, rgba(255, 255, 255, 0) 96%, #480DFF 4%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #480DFF 4%);
+  border-bottom: 3px solid #484CFF;
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 96%, #484CFF 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #484CFF 4%);
   background-position: -200px 100%;
   background-size: 0 100%;
   background-repeat: no-repeat; 
@@ -71,7 +93,7 @@ label {
       
 .input:focus + .label-text {
   width: 90%;
-  color: #480DFF;
+  color: #484CFF;
   font-size: 13px;
   transform: translateY(-74px);
   transition: all 0.4s;
@@ -94,7 +116,7 @@ label {
   -moz-appearance: none;
   -webkit-appearance: none;
   border: none;
-  background-color: #480DFF;
+  background-color: #484CFF;
   color: white;
   font-size: 15px;
   font-weight: 500;
@@ -107,8 +129,8 @@ label {
 
 .submit:hover {
   background-color: #FFFFFF;
-  color: #480DFF;
-  border: 2px solid #480DFF;;
+  color: #484CFF;
+  border: 2px solid #484CFF;;
 }
 
 a {
@@ -120,7 +142,7 @@ a {
 }
 
 a:hover {
-  color: #480DFF;
+  color: #484CFF;
 }
 
 .password {
@@ -129,12 +151,12 @@ a:hover {
 }
 
 .signup {
-  color:  #480DFF;
+  color:  #484CFF;
 }
 
 .signup:hover {
   text-decoration: underline;
-  color:  #480DFF;
+  color:  #484CFF;
 }
 
 footer {
@@ -144,5 +166,5 @@ footer {
 }
 
 footer + span {
-  color: #480DFF;
+  color: #484CFF;
 }

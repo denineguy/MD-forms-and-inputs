@@ -4,76 +4,128 @@
     <meta charset="utf-8">
     <title>Shipping and Billing</title>
     <link rel="stylesheet" href="shipping_billing_form.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="container">
-      <header>Checkout</header>
-      <form action="">
-        <fieldset>
-          <legend>Shipping Informattion</legend>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">First Name</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Last Name</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Street Address</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Apt/Floor(optional)</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">City</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Zip Code</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Phone Number</div>
-          </label>
-        </fieldset>
+      
+      <header>
+        <h1>Company Name</h1>
+      </header>
+       <h2><span>Checkout</span></h2>
+      
+      <div class="info">       
+        <section class="addresses">
+          <form action="">
 
-        <fieldset>
-          <legend>Billing Informattion</legend>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">First Name</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Last Name</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Street Address</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Apt/Floor(optional)</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">City</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Zip Code</div>
-          </label>
-          <label>
-            <input type="text" class="input" required />
-            <div class="label-text">Phone Number</div>
-          </label>
-        </fieldset>
-        <input type="submit" value="Save and Continue" class="submit">
-      </form>
+          <!-- <div class="sub-container"> -->
+            
+            <div class="shipping">
+              <p class="heading">Shipping Information</p>
+              <label class="half">
+                <input type="text" class="input" name="firstnameship" required />
+                <div class="label-text">First Name</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="lastnameship" required />
+                <div class="label-text">Last Name</div>
+              </label>
+              <label class="address-label">
+                <input type="text" class="input" name="address1ship" required />
+                <div class="label-text">Address</div>
+              </label>
+              <label>
+                <input type="text" class="input" name="address2ship" required />
+                <div class="label-text">Apt/Floor (optional)</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="countryship" required />
+                <div class="label-text">Country</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="cityship" required />
+                <div class="label-text">City</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="stateship" required />
+                <div class="label-text">State</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="zipcodeship" required />
+                <div class="label-text">Zip Code</div>
+              </label>
+            </div>
+          <!-- </div> -->
+
+            <div class="billing">
+              <p class="heading">Billing Informattion</p>
+              <label class="label-checkbox">
+                <input type="checkbox" class="checkbox" name="checkboxaddress" required/>
+                <span>Same as Shipping Address</span>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="firstnamebill" required />
+                <div class="label-text">First Name</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="lastnamebill" required />
+                <div class="label-text">Last Name</div>
+              </label>
+              <label>
+                <input type="text" class="input" name="address1bill" required />
+                <div class="label-text">Address</div>
+              </label>
+              <label>
+                <input type="text" class="input" name="address2bill" required />
+                <div class="label-text">Apt/Floor(optional)</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="countrybill" required />
+                <div class="label-text">Country</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="citybill" required />
+                <div class="label-text">City</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="statebill" required />
+                <div class="label-text">State</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="zipcodebill" required />
+                <div class="label-text">Zip Code</div>
+              </label>
+            </div>
+            <input type="submit" value="Save and Continue" class="submit">   
+          </form>
+        </section>
+
+        <section class="orders">
+          <div class="summary">
+            <p class="heading">Order Summary</p>
+            <p><span>Subtotal</span><span class="price">$129.00</span></p>
+            <p><span>Tax</span><span class="price">$12.33</span></p>
+            <p><span>Shipping</span><span class="price">$9.95</span></p>
+            <p><span>Total</span><span class="price">$151.28</span></p>
+            <button type="button" class="submit order-button">PLACE ORDER</button>
+          </div>
+          <div class="promos">
+            <p class="heading">Promotion Code</p>
+            <form action="">
+              <label class="code">
+                <input type="text" class="input promo-input" name="zipcodebill" required />
+                  <div class="label-text">Enter Promo Code</div>
+              </label>
+              <input type="submit" value="Apply" class="apply-button"> 
+            </form>
+          </div>
+        </section>
+      </div>
     </div>
   </body>
 </html>
