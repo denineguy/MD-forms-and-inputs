@@ -2,7 +2,7 @@
 <html>
   <head lang="en">
     <meta charset="utf-8">
-    <title>Shipping and Billing</title>
+    <title>Shipping and Billing Form</title>
     <link rel="stylesheet" href="shipping_billing_form.css" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -22,9 +22,6 @@
       <div class="info">       
         <section class="addresses">
           <form action="">
-
-          <!-- <div class="sub-container"> -->
-            
             <div class="shipping">
               <p class="heading">Shipping Information</p>
               <label class="half">
@@ -60,10 +57,9 @@
                 <div class="label-text">Zip Code</div>
               </label>
             </div>
-          <!-- </div> -->
 
             <div class="billing">
-              <p class="heading">Billing Informattion</p>
+              <p class="heading">Billing Information</p>
               <label class="label-checkbox">
                 <input type="checkbox" class="checkbox" name="checkboxaddress" required/>
                 <span>Same as Shipping Address</span>
@@ -76,13 +72,13 @@
                 <input type="text" class="input" name="lastnamebill" required />
                 <div class="label-text">Last Name</div>
               </label>
-              <label>
+              <label class="address-label">
                 <input type="text" class="input" name="address1bill" required />
                 <div class="label-text">Address</div>
               </label>
               <label>
                 <input type="text" class="input" name="address2bill" required />
-                <div class="label-text">Apt/Floor(optional)</div>
+                <div class="label-text">Apt/Floor <span class="opt">(optional)</span></div>
               </label>
               <label class="half">
                 <input type="text" class="input" name="countrybill" required />
@@ -100,8 +96,8 @@
                 <input type="text" class="input" name="zipcodebill" required />
                 <div class="label-text">Zip Code</div>
               </label>
+              <input type="submit" value="Save and Continue" class="submit continue-button">   
             </div>
-            <input type="submit" value="Save and Continue" class="submit">   
           </form>
         </section>
 

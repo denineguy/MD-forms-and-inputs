@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Debit Credit Form</title>
+    <link rel="stylesheet" href="debit_credit_form.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      
+      <header>
+        <h1>Company Name</h1>
+      </header>
+       <h2><span>Payment Information</span></h2>
+      
+      <div class="info">       
+        <section class="card-info">
+          <form action="">
+            
+            <div class="card-details">
+              <p class="heading">Credit Card Information</p>
+              <label class="payment-label">
+                <input type="text" class="input" name="fullname" required />
+                <div class="label-text">Name on Card</div>
+                <p class="help-info">Your name as it appears credit card</p>
+              </label>
+              <label class="payment-label">
+                <input 
+                  type="text" 
+                  class="input"
+                  name="card-number"
+                  maxlength="19"
+                  placeholder="1234-1234-1234-1234" 
+                  required/>
+                <div class="label-text">Card Number</div>
+              </label>
+              <label class="half">
+                <input type="text" class="input" name="csvcode" required />
+                <div class="label-text">CSV Code</div>
+                <p class="help-info">3-digit code on back of card</p>
+              </label>
+              <label class="half expiration">
+                <select name="month" id="" class="date">
+                  <option value="month" default selected>Month</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                <span>/</span>
+                <select name="year" id="" class="date">
+                  <option value="Year" default selected>Year  </option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                  <option value="2029">2029</option>
+                  <option value="2030">2030</option>
+                  <option value="2031">2031</option>
+                </select>
+                <div class="label-text">Expiration Date</div>
+              </label>
+
+              <input type="submit" value="Continue" class="submit continue-button">  
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
