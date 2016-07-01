@@ -90,6 +90,7 @@ label {
 .expiration {
   margin: 0;
   width: 48%;
+  position: relative;
 }
 
 .label-text {
@@ -182,6 +183,7 @@ select {
   outline: 0;
   padding: 0.3em 0.5em;
   transition: all 0.3s;
+  position: relative;
 }
 
 select ~ span {
@@ -199,6 +201,22 @@ select:hover {
 
 select:focus {
   font-size: 16px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+  position: absolute; 
+  top: 32px;
+  z-index: 100;
+}
+
+.arrow-month {
+  left: 75px;
+}
+
+.arrow-year {
+  right: 10px;
 }
 
 .submit {

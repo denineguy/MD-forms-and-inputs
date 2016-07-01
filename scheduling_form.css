@@ -54,7 +54,7 @@ label {
 .time {
   display: inline-block;
   width: 39%;
-  /*padding: 30px 0 0 60px;*/
+  position: relative;
 }
 
 .time:nth-child(2) {
@@ -151,13 +151,24 @@ input:focus::
   transition: all 0.4s;
 }
 
+.arrow {
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute; 
+  top: 20px;
+  z-index: 100;
+  left: 140px;
+  color: gray;
+}
+
 select:focus ~ .label-text {
   font-weight: 400;
   letter-spacing: 1px;
   width: 100%;
   color: #484CFF;
   font-size: 13px;
-  transform: translateY(-87px);
+  transform: translateY(-96px);
   transition: all 0.4s;
 }
 
@@ -171,14 +182,14 @@ select {
   margin-right: 0;
   background-color: #FFFFFF;
   color: #9B9B9B;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 54px;
   height: 52px;
   outline: 0;
   padding: 0.3em 0.5em;
   transition: all 0.3s;
   position: relative;
-  top: -19px;
+  top: -22px;
   letter-spacing: 1px;
   font-family: 'Open Sans', Helvetica;
 }
@@ -197,9 +208,8 @@ select:hover {
 }
 
 select:focus {
-  font-size: 16px;
+  font-size: 12px;
 }
-
 
 .help-info {
   font-size: 12px;
