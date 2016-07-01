@@ -15,7 +15,6 @@ body {
 }
 
 h1 {
-/*  background-color: #480DFF;*/
   background-color: #484CFF;
   font-size: 20px;
   font-weight: 400;
@@ -31,19 +30,18 @@ header p {
 
 h2 {
   border-bottom: 1px solid #484CFF;
-  padding-top: 15px;
+  padding-top: 10px;
   line-height: 0.1em;
   margin: 25px auto;
   text-align: center;
   width: 77%;
-  color: #484CFF;
   color: #4F4F4F;
 }
 
 h2 span {
   background:#fff;
   padding:0 10px; 
-  font-size: 22px
+  font-size: 18px
 }
 
 /* this styles the label */
