@@ -1,0 +1,168 @@
+body {
+  font-family: 'Open Sans', Helvetica;
+  background-color: #D7D8DB;
+}
+
+.container {
+  background-color: #FFFFFF;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  left: 50%;
+  margin-right: -50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+h1 {
+  background-color: #484CFF;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  padding: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+header p {
+  padding: 10px;
+}
+
+h2 {
+  border-bottom: 1px solid #484CFF;
+  padding-top: 10px;
+  line-height: 0.1em;
+  margin: 25px auto;
+  text-align: center;
+  width: 77%;
+  color: #4F4F4F;
+}
+
+h2 span {
+  background:#fff;
+  padding:0 10px; 
+  font-size: 18px
+}
+
+/* this styles the label */
+label {
+  display: block;
+  padding: 30px 60px 0 60px;
+  color: #9B9B9B;
+}
+
+.label-text {
+  cursor: text;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transform: translateY(-34px);
+}
+    
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #484CFF;
+  color: gray;
+  font-size: 20px;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 90%;
+}
+
+.input:focus {
+  width: 90%;
+  border-bottom: 3px solid #484CFF;
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 96%, #484CFF 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #484CFF 4%);
+  background-position: -200px 100%;
+  background-size: 0 100%;
+  background-repeat: no-repeat; 
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+.input:hover + .label-text {
+  width: 90%;
+  color: #4F4F4F;
+}
+      
+.input:focus + .label-text {
+  width: 90%;
+  color: #484CFF;
+  font-size: 13px;
+  transform: translateY(-74px);
+  transition: all 0.4s;
+}
+
+.input:valid + .label-text {
+  font-size: 13px;
+  transform: translateY(-74px);
+  transition: all 0.4s;
+}
+
+.label-checkbox {
+  display: inline;
+  font-size: 15px;
+  padding: 0 60px 0 60px;
+}
+
+.submit {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: #484CFF;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  outline: none;
+  margin: 3em 4em 1em 4em;
+  padding: 15px;
+  width: 76%;
+}
+
+.submit:hover {
+  background-color: #FFFFFF;
+  color: #484CFF;
+  border: 2px solid #484CFF;;
+}
+
+a {
+  color: #9B9B9B;
+  display: inline;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #484CFF;
+}
+
+.password {
+  left: 57%;
+  position: absolute;
+}
+
+.signup {
+  color:  #484CFF;
+}
+
+.signup:hover {
+  text-decoration: underline;
+  color:  #484CFF;
+}
+
+footer {
+  padding-bottom: 30px;
+  text-align: center;
+  color: #9B9B9B;
+}
+
+footer + span {
+  color: #484CFF;
+}
