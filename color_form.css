@@ -1,0 +1,89 @@
+body {
+  background-color: black;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.color-container {
+  margin: 0 auto;
+  border: 5px outset #9B9B9B;
+  width: 300px;
+  height: 300px;
+  color: white;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+form {
+  text-align: center;
+}
+label {
+  margin: 0 auto;
+}
+
+input {
+  width: 300px;
+  margin-top: 30px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 4px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid black;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-top: -7px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+.label-text {
+  margin: 5px auto 0;
+  text-align: left;
+  width: 300px;
+}
+
+.red[type=range]::-webkit-slider-thumb {
+  background-color: red;
+}
+
+.red ~ .label-text {
+  color: red;
+}
+
+.blue[type=range]::-webkit-slider-thumb {
+  background-color: blue;
+}
+
+.blue ~ .label-text {
+  color: blue;
+}
+
+.green[type=range]::-webkit-slider-thumb {
+  background-color: green;
+}
+
+.green ~ .label-text {
+  color: green;
+}
+
+.alpha[type=range]::-webkit-slider-thumb {
+  background-color: white;
+}
+
+.alpha ~ .label-text {
+  color: white;
+}

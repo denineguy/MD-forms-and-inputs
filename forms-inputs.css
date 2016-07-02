@@ -1,0 +1,33 @@
+header {
+  margin: 30px 0;
+  text-align: center;
+  width: 100%;
+  border-bottom: 4px double black;
+}
+img {
+  width: 300px;
+  height: 200px;
+}
+
+div {
+  width: 21%;
+  float: left;
+  margin: 28px;
+  text-align: center;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  box-shadow: rgb(225, 225, 225) 2px 4px 2px;
+}
+
+a {
+  text-decoration: none;
+  width: 100%
+}
+
+p {
+  color: #000000;
+  width: 100%;
+}
+
+a:hover > p {
+  color: #E0A210;
+}
