@@ -3,10 +3,38 @@ header {
   text-align: center;
   width: 100%;
   border-bottom: 4px double black;
+  position: relative;
 }
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 0.4em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.back {
+  display: inline-block;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 5%;
+  top: 1.5em;
+}
+
 img {
-  width: 300px;
   height: 200px;
+  width: 100%
 }
 
 div {
@@ -18,9 +46,9 @@ div {
   box-shadow: rgb(225, 225, 225) 2px 4px 2px;
 }
 
-a {
+.form-link {
   text-decoration: none;
-  width: 100%
+  width: 300px;
 }
 
 p {
@@ -28,6 +56,10 @@ p {
   width: 100%;
 }
 
-a:hover > p {
+.form-link:hover > p {
   color: #E0A210;
+}
+
+h1 {
+  display: inline-block;
 }
