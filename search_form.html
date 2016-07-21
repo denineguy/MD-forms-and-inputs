@@ -9,9 +9,9 @@
   <body>
     <div class="container">
       <h2><span>Search Form</span></h2>
-      <form action="">
+      <form id="form">
         <label>
-          <input type="text" class="input" placeholder="Search"required />
+          <input type="text" class="input" placeholder="Search" required id="criteria" />
         </label>
         <label class="dropdown">
           <select name="month" id="" class="date">
@@ -26,9 +26,10 @@
             <option value="Swim">Swim</option>
           </select>
         </label>
-        <input type="submit" value="Search" class="submit">
+        <input type="submit" value="Search" class="submit" id="search">
       </form>
     </div>
-
+    <script src="validator.js" type="text/javascript"></script>
+    <script src="search_form.js" type="text/javascript"></script>
   </body>
 </html>

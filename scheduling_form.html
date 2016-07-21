@@ -11,21 +11,21 @@
     <header>
       <h1>Schedule An Appointment</h1>
     </header>
-      <form action="">
+      <form id="form">
         <label>
-          <input type="date" class="input" required />
+          <input class="input" id="date" onfocus="(this.type='date')" required />
           <div class="label-text">Date</div>
           <span class="help-info">MM/DD/YYYY</span>
         </label>
         <label class="time">
-          <input type="time" class="input" required />
+          <input class="input" id="time" onfocus="(this.type='time')" required />
           <div class="label-text">Time</div>
           <span class="help-info">12:00 PM</span>
         </label>
         <label class="time">
         <img src="images/arrow.png" alt="" class="arrow">
-          <select name="DropDownTimezone" id="DropDownTimezone">
-            <option value="timezone" default selected>Timezone</option>
+          <select name="DropDownTimezone" id="timezone">
+            <option value="timezone" default>Timezone</option>
             <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
             <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
             <option value="-10.0">(GMT -10:00) Hawaii</option>
@@ -61,19 +61,22 @@
           <div class="label-text">Timezone</div>
         </label>
         <label>
-          <input type="text" class="input" required />
+          <input type="text" class="input" id="phone-number" required />
           <div class="label-text">Contact Number</div>
+          <span class="help-info">123-123-1234</span>
         </label>
-        <label>
-          <input type="email" class="input" required />
+        <label class="email-label">
+          <input type="email" class="input" id="email" required />
           <div class="label-text">Email Address</div>
         </label>
         <label class="message-label">
-          <input type="textarea" class="input message" required />
+          <input type="textarea" id="message" class="input message" required />
           <div class="label-text">Message</div>
         </label>
-        <input type="submit" value="Schedule" class="submit">
+        <input type="submit" value="Schedule" class="submit" id="schedule">
       </form>
     </div>
+    <script src="validator.js" type="text/javascript"></script>
+    <script src="scheduling_form.js" type="text/javascript"></script>
   </body>
 </html>

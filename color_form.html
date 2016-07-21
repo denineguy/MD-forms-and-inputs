@@ -10,7 +10,7 @@
     <div class="container">
       <h2><span>Color Form</span></h2>
       <div class="color-container"></div>
-      <form action="">
+      <form id="form">
         <label>
           <input type="range" class="input red" required />
           <div class="label-text">Red</div>
@@ -27,7 +27,26 @@
           <input type="range" class="input alpha"/>
           <div class="label-text">Alpha</div>
         </label>
+        <label class="color-input">
+          <div class="label-text format rgb">RGB</div>
+          <input type="text" class="input text" id="r"/>
+          <input type="text" class="input text" id="g"/>
+          <input type="text" class="input text" id="b"/>
+        </label>
+        <label class="color-input">
+          <div class="label-text format">HSL</div>
+          <input type="text" class="input text" id="h"/>
+          <input type="text" class="input text" id="s"/>
+          <input type="text" class="input text" id="l"/>
+        </label>
+        <label class="color-input hexcolor">
+          <div class="label-text format">HEX</div>
+          <input type="text" class="input text hex" id="hex"/>
+        </label>
+        <input type="submit" value="APPLY" class="submit" id="apply">
       </form>
     </div>
+    <script src="validator.js" type="text/javascript"></script>
+    <script src="color_form.js" type="text/javascript"></script>
   </body>
 </html>

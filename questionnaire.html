@@ -9,62 +9,64 @@
   <body>
     <div class="container">
       <h2><span>Questionnaire</span></h2>
-      <form action="">
+      <form id="form">
         <label>
           <p>What is your Favorite Fruit?</p>
           <input type="radio" name="fruit" value="apple" checked>
           <label for="apple">Apple</label></br>
-          <input type="radio" name="fruit" value="orange"> 
+          <input type="radio" name="fruit" value="orange">
           <label for="orange">orange</label><br>
           <input type="radio" name="fruit" value="banana">
           <label for="banana">banana</label><br>
           <input type="radio" name="fruit" value="grape">
           <label for="grape">grape</label><br>
-          <input type="radio" name="fruit" value="other">
-          <label for="other">other</label><input type="text" name="other_reason" class="other-input" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+          <input type="radio" name="fruit" value="other" id="fruit-radio">
+          <label for="other">other</label><input type="text" name="other_reason" class="other-input" id="fruit-other" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
         </label>
         <label>
           <p>What is your Favorite Ice Cream?</p>
           <input type="radio" name="ice-cream" value="Vanilla" checked>
           <label for="Vanilla">Vanilla</label></br>
-          <input type="radio" name="ice-cream" value="chocolate"> 
+          <input type="radio" name="ice-cream" value="chocolate">
           <label for="chocolate">chocolate</label><br>
           <input type="radio" name="ice-cream" value="strawberry">
           <label for="strawberry">strawberry</label><br>
           <input type="radio" name="ice-cream" value="chocolate-chip">
           <label for="chocolate-chip">chocolate chip</label><br>
-          <input type="radio" name="ice-cream" value="other">
-          <label for="other">other</label><input type="text" name="other_reason" class="other-input" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+          <input type="radio" name="ice-cream" value="other" id="icecream-radio">
+          <label for="other">other</label><input type="text" name="other_reason" class="other-input" id="icecream-other" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
         </label>
         <label>
           <p>What is your Favorite Superhero?</p>
           <input type="radio" name="superhero" value="superman" checked>
           <label for="superman">superman</label></br>
-          <input type="radio" name="superhero" value="batman"> 
+          <input type="radio" name="superhero" value="batman">
           <label for="batman">batman</label><br>
           <input type="radio" name="superhero" value="spiderman">
           <label for="spiderman">spiderman</label><br>
           <input type="radio" name="superhero" value="ironman">
           <label for="ironman">ironman</label><br>
-          <input type="radio" name="superhero" value="other">
-          <label for="other">other</label><input type="text" name="other_reason" class="other-input" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+          <input type="radio" name="superhero" value="other" id="superhero-radio">
+          <label for="other">other</label><input type="text" name="other_reason" class="other-input" id="superhero-other" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
         </label>
         <label>
           <p>What is your Favorite Soda?</p>
           <input type="radio" name="soda" value="coke" checked>
           <label for="coke">coke</label></br>
-          <input type="radio" name="soda" value="pepsi"> 
+          <input type="radio" name="soda" value="pepsi">
           <label for="pepsi">pepsi</label><br>
           <input type="radio" name="soda" value="sprite">
           <label for="sprite">sprite</label><br>
           <input type="radio" name="soda" value="gingerale">
           <label for="gingerale">gingerale</label><br>
-          <input type="radio" name="soda" value="other">
-          <label for="other">other</label><input type="text" name="other_reason" class="other-input" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+          <input type="radio" name="soda" value="other" id="soda-radio">
+          <label for="other">other</label><input type="text" name="other_reason" class="other-input" id="soda-other" />​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
         </label>
-    
-        <input type="submit" value="SUBMIT" class="submit">
+
+        <input type="submit" value="SUBMIT" class="submit" id="submit">
       </form>
     </div>
+    <script src="validator.js" type="text/javascript"></script>
+    <script src="questionnaire.js" type="text/javascript"></script>
   </body>
 </html>

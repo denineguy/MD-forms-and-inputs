@@ -43,6 +43,10 @@ label {
   margin-bottom: 40px;
 }
 
+.email-label {
+  padding-top: 32px;
+}
+
 .label-text {
   cursor: text;
   font-size: 15px;
@@ -69,13 +73,13 @@ label:nth-child(4) {
   padding-top: 10px;
 }
 
-input:not( :focus )::-webkit-datetime-edit-year-field,
-input:not( :focus )::-webkit-datetime-edit-month-field,
-input:not( :focus )::-webkit-datetime-edit-day-field,
-input:not( :focus )::-webkit-datetime-edit-text,
-input:not( :focus )::-webkit-datetime-edit-hour-field,
-input:not( :focus )::-webkit-datetime-edit-minute-field,
-input:not( :focus )::-webkit-datetime-edit-ampm-field {
+input:focus-webkit-datetime-edit-year-field,
+input:focus-webkit-datetime-edit-month-field,
+input:focus-webkit-datetime-edit-day-field,
+input:focus-webkit-datetime-edit-text,
+input:focus-webkit-datetime-edit-hour-field,
+input:focus-webkit-datetime-edit-minute-field,
+input:focus-webkit-datetime-edit-ampm-field {
   -webkit-appearance: none;
   color: transparent;
 }
@@ -140,22 +144,22 @@ input:focus::
   transition: all 0.4s;
 }
 
-.message:focus + .label-text,
-.message:valid + .label-text {
-  transform: translateY(-144px);
-}
-
 .input:valid + .label-text {
   font-size: 13px;
   transform: translateY(-74px);
   transition: all 0.4s;
 }
 
+.message:focus + .label-text,
+.message:valid + .label-text {
+  transform: translateY(-144px);
+}
+
 .arrow {
   display: block;
   height: 30px;
   width: 30px;
-  position: absolute; 
+  position: absolute;
   top: 20px;
   z-index: 100;
   left: 140px;

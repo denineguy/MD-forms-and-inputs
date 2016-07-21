@@ -13,47 +13,47 @@
   </head>
   <body>
     <div class="container">
-      
+
       <header>
         <h1>Company Name</h1>
       </header>
        <h2><span>Checkout</span></h2>
-      
-      <div class="info">       
+
+      <div class="info">
         <section class="addresses">
-          <form action="">
+          <form id="form">
             <div class="shipping">
               <p class="heading">Shipping Information</p>
               <label class="half">
-                <input type="text" class="input" name="firstnameship" required />
+                <input type="text" class="input" name="firstnameship" id="firstnameship" required />
                 <div class="label-text">First Name</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="lastnameship" required />
+                <input type="text" class="input" name="lastnameship" id="lastnameship" required />
                 <div class="label-text">Last Name</div>
               </label>
               <label class="address-label">
-                <input type="text" class="input" name="address1ship" required />
+                <input type="text" class="input" name="address1ship" id="address1ship" required />
                 <div class="label-text">Address</div>
               </label>
               <label>
-                <input type="text" class="input" name="address2ship" required />
+                <input type="text" class="input" name="address2ship" id="address2ship" required />
                 <div class="label-text">Apt/Floor (optional)</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="countryship" required />
+                <input type="text" class="input" name="countryship" id="countryship" required />
                 <div class="label-text">Country</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="cityship" required />
+                <input type="text" class="input" name="cityship" id="cityship" required />
                 <div class="label-text">City</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="stateship" required />
+                <input type="text" class="input" name="stateship" id="stateship" required />
                 <div class="label-text">State</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="zipcodeship" required />
+                <input type="text" class="input" name="zipcodeship" id="zipcodeship" required />
                 <div class="label-text">Zip Code</div>
               </label>
             </div>
@@ -65,38 +65,38 @@
                 <span>Same as Shipping Address</span>
               </label>
               <label class="half">
-                <input type="text" class="input" name="firstnamebill" required />
+                <input type="text" class="input" name="firstnamebill" id="firstnamebill" required />
                 <div class="label-text">First Name</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="lastnamebill" required />
+                <input type="text" class="input" name="lastnamebill" id="lastnamebill" required />
                 <div class="label-text">Last Name</div>
               </label>
               <label class="address-label">
-                <input type="text" class="input" name="address1bill" required />
+                <input type="text" class="input" name="address1bill" id="address1bill" required />
                 <div class="label-text">Address</div>
               </label>
               <label>
-                <input type="text" class="input" name="address2bill" required />
+                <input type="text" class="input" name="address2bill" id="address2bill" required />
                 <div class="label-text">Apt/Floor <span class="opt">(optional)</span></div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="countrybill" required />
+                <input type="text" class="input" name="countrybill" id="countrybill" required />
                 <div class="label-text">Country</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="citybill" required />
+                <input type="text" class="input" name="citybill" id="citybill" required />
                 <div class="label-text">City</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="statebill" required />
+                <input type="text" class="input" name="statebill" id="statebill" required />
                 <div class="label-text">State</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="zipcodebill" required />
+                <input type="text" class="input" name="zipcodebill" id="zipcodebill" required />
                 <div class="label-text">Zip Code</div>
               </label>
-              <input type="submit" value="Save and Continue" class="submit continue-button">   
+              <input type="submit" value="Save and Continue" class="submit continue-button">
             </div>
           </form>
         </section>
@@ -108,20 +108,22 @@
             <p><span>Tax</span><span class="price">$12.33</span></p>
             <p><span>Shipping</span><span class="price">$9.95</span></p>
             <p><span>Total</span><span class="price">$151.28</span></p>
-            <button type="button" class="submit order-button">PLACE ORDER</button>
+            <button type="button" class="submit order-button" id="place-order">PLACE ORDER</button>
           </div>
           <div class="promos">
             <p class="heading">Promotion Code</p>
-            <form action="">
+            <form id="applyform">
               <label class="code">
-                <input type="text" class="input promo-input" name="zipcodebill" required />
+                <input type="text" class="input promo-input" name="promo" id="promo" required />
                   <div class="label-text">Enter Promo Code</div>
               </label>
-              <input type="submit" value="Apply" class="apply-button"> 
+              <input type="submit" id="apply" value="Apply" class="apply-button">
             </form>
           </div>
         </section>
       </div>
     </div>
+    <script src="validator.js" type="text/javascript"></script>
+    <script src="shipping_billing_form.js" type="text/javascript"></script>
   </body>
 </html>

@@ -22,7 +22,7 @@ label {
 
 input {
   width: 300px;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 input[type=range] {
@@ -86,4 +86,40 @@ input[type=range]:focus {
 
 .alpha ~ .label-text {
   color: white;
+}
+
+.text {
+  width: 75px;
+}
+
+input[type=text] {
+  margin-top: 10px;
+}
+
+.format {
+  color: white;
+  display: inline-block;
+  width: 40px;
+}
+
+.hexcolor input[type=text] {
+  width: 160px;
+}
+
+.color-input {
+  display: block;
+}
+
+.rgb {
+  margin-top: 40px;
+}
+
+.hexcolor {
+  display: inline-block;
+}
+
+input[type=submit] {
+  display: inline-block;
+  width: 80px;
+  /*padding: 20px;*/
 }

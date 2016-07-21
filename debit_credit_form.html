@@ -13,41 +13,42 @@
   </head>
   <body>
     <div class="container">
-      
+
       <header>
         <h1>Company Name</h1>
       </header>
        <h2><span>Payment Information</span></h2>
-      
-      <div class="info">       
+
+      <div class="info">
         <section class="card-info">
-          <form action="">
-            
+          <form id="form">
+
             <div class="card-details">
               <p class="heading">Credit Card Information</p>
               <label class="payment-label">
-                <input type="text" class="input" name="fullname" required />
+                <input type="text" class="input" name="fullname" id="name" required />
                 <div class="label-text">Name on Card</div>
                 <p class="help-info">Your name as it appears credit card</p>
               </label>
               <label class="payment-label">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   class="input"
                   name="card-number"
                   maxlength="19"
-                  placeholder="1234-1234-1234-1234" 
+                  placeholder="1234-1234-1234-1234"
+                  id="card-number"
                   required/>
                 <div class="label-text">Card Number</div>
               </label>
               <label class="half">
-                <input type="text" class="input" name="csvcode" required />
+                <input type="text" class="input" name="csvcode" id="csvcode" required />
                 <div class="label-text">CSV Code</div>
-                <p class="help-info">3-digit code on back of card</p>
+                <p class="help-info">Visa & MC 3-digit code on back of card</p><p class="help-info">Amex 4-digit code on front of card</p>
               </label>
               <label class="half expiration">
                 <img src="images/arrow.png" alt="" class="arrow-month">
-                <select name="month" id="" class="date">
+                <select name="month" id="month" class="date">
                   <option value="month" default selected>Month</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -64,7 +65,7 @@
                 </select>
                 <span>/</span>
                 <img src="images/arrow.png" alt="" class="arrow-year">
-                <select name="year" id="" class="date">
+                <select name="year" id="year" class="date">
                   <option value="Year" default selected>Year  </option>
                   <option value="2016">2016</option>
                   <option value="2017">2017</option>
@@ -86,11 +87,13 @@
                 <div class="label-text">Expiration Date</div>
               </label>
 
-              <input type="submit" value="Continue" class="submit continue-button">  
+              <input type="submit" value="Continue" class="submit continue-button" id="submitCard">
             </div>
           </form>
         </section>
       </div>
     </div>
+    <script src="validator.js" type="text/javascript"></script>
+    <script src="debit_credit_form.js" type="text/javascript"></script>
   </body>
 </html>
