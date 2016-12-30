@@ -40,7 +40,7 @@ h2 {
 
 h2 span {
   background:#fff;
-  padding:0 10px; 
+  padding:0 10px;
   font-size: 18px
 }
 
@@ -58,7 +58,7 @@ label {
   text-transform: uppercase;
   transform: translateY(-34px);
 }
-    
+
 .input {
   background-color: transparent;
   border: none;
@@ -80,7 +80,7 @@ label {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #484CFF 4%);
   background-position: -200px 100%;
   background-size: 0 100%;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
 
@@ -88,7 +88,7 @@ label {
   width: 90%;
   color: #4F4F4F;
 }
-      
+
 .input:focus + .label-text {
   width: 90%;
   color: #484CFF;

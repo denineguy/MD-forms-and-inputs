@@ -1,14 +1,15 @@
 var signupForm = document.getElementById('signup');
+var lastName = document.getElementById('lastname');
+var email = document.getElementById('email');
+var password = document.getElementById('password');
+var birthdate = document.getElementById('birthdate');
+var form = document.getElementById('form');
+var valid;
 signupForm.addEventListener('click', function(event) {
   event.preventDefault();
-  var firstName = document.getElementById('firstname').value;
-  var lastName = document.getElementById('lastname').value;
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
-  var birthdate = document.getElementById('birthdate').value;
-  var form = document.getElementById('form');
-  var age = getAge(birthdate);
-  var valid;
+  var email = document.getElementById('email');
+  var firstName = document.getElementById('firstname');
+  var age = getAge(birthdate.value);
   function getAge(input) {
     var birthday = new Date(input);
     var today = new Date();
@@ -16,59 +17,146 @@ signupForm.addEventListener('click', function(event) {
     return Math.floor(diff/31536000000); // Divide by 1000*60*60*24*365
   };
 
-  /**
-   * Assume that the form is valid if I don't want to do the final check at
-   * the end
-   */
-  //form.className = 'valid';
+  var first = document.getElementById('first');
+  var last = document.getElementById('last');
+  var emailMsg = document.getElementById('email-msg');
+  var passwordMsg = document.getElementById('password-msg');
+  var birthdayMsg = document.getElementById('birthday-msg');
+
 
   /**
-   * Check if users firstname is valid.  Input is not empty and is at least 2
-   * characters long. Not checking if the name is alphaNumeric as some people * have hyphenated or apostrophe's in names.
-   */
-  if (validator.isEmpty(firstName)) {
-    form.className = 'invalid';
+  * Check if users firstname is valid.  Input is not empty and is at least 2
+  * characters long. Not checking if the name is alphaNumeric as some people * have hyphenated or apostrophe's in names.
+  */
+  if (!validator.isEmpty(firstName.value) && validator.isOfLength(firstName.value, 2)) {
+    first.innerHTML = ''
+    firstName.className = 'input';
+    first.removeAttribute('class', 'firstname-error');
   } else {
-    valid = true;
-  }
-
-  if (validator.isOfLength(firstName, 2)) {
-    valid = true;
-  } else {
-    form.className = 'invalid';
+    first.innerHTML = 'Please enter at least 2 characters';
+    firstName.className = 'input invalid';
+    first.setAttribute('class', 'firstname-error');
   }
 
   /**
    * Check if users firstname is valid.  Input is not empty and is at least 2 * characters long.   Not checking if the name is alphaNumeric as some
    * people have hyphenated or apostrophe's in names.
    */
-  if (validator.isEmpty(lastName)) {
-    form.className = 'invalid';
+  if (!validator.isEmpty(lastName.value) && validator.isOfLength(lastName.value, 2)) {
+    lastName.className = 'input';
+    last.innerHTML = '';
+    last.removeAttribute('class', 'lastname-error');
   } else {
-    valid = true;
-  }
-
-  if (validator.isOfLength(lastName, 2)) {
-    valid = true;
-  } else {
-    form.className = 'invalid';
+    lastName.className = 'input invalid';
+    last.innerHTML = 'Please enter at least 2 characters';
+    last.setAttribute('class', 'lastname-error');
   }
 
   /**
    * Check if user email is valid. Input is not empty and email address is
    * valid.
    */
-  if (validator.isEmpty(email)) {
-    form.className = 'invalid';
+  if (!validator.isEmpty(email.value) && validator.isEmailAddress(email.value)) {
+    email.className = 'input';
+    emailMsg.innerHTML = '';
+    emailMsg.removeAttribute('class', 'email-error');
   } else {
-    valid = true;
+    email.className = 'input invalid';
+    emailMsg.innerHTML = 'Please enter at valid email address';
+    emailMsg.setAttribute('class', 'email-error');
   }
 
-  if (validator.isEmailAddress(email)) {
-    valid = true;
+  /**
+   * Check if user password is valid. Input is not empty and is at least 6-8
+   * chararters long
+   */
+  if (!validator.isEmpty(password.value) && (validator.isOfLength(password.value, 6)) && (validator.isLength(password.value, 8))) {
+   password.className = 'input';
+   passwordMsg.innerHTML = '';
+   passwordMsg.removeAttribute('class', 'password-error');
   } else {
-    form.className = 'invalid';
+   password.className = 'input invalid';
+   passwordMsg.innerHTML = 'Please enter at valid password';
+   passwordMsg.setAttribute('class', 'password-error');
   }
+
+  /**
+   * Check if user date of birth is valid. Checks that the input is not
+   * empty, that the birthday is before today and that it computes to a
+   * minimum age of 18.
+   */
+  if (!validator.isEmpty(birthdate.value) && (validator.isDate(birthdate.value) && validator.isBeforeToday(birthdate.value)) && age >= 18) {
+    birthdate.className = 'input';
+    birthdayMsg.innerHTML = '';
+    birthdayMsg.removeAttribute('class', 'birthdate-error');
+  } else {
+    birthdate.className = 'input invalid';
+    birthdayMsg.innerHTML = 'You must be older than 18';
+    birthdayMsg.setAttribute('class', 'birthdate-error');
+  }
+
+    // if (validator.isDate(birthdate)) {
+    //   valid = true;
+    // } else {
+    //   form.className = 'invalid';
+    // }
+    //
+    // if (validator.isBeforeToday(birthdate)) {
+    //   valid = true;
+    // } else {
+    //   form.className = 'invalid';
+    // }
+    //
+    // if (age >= 18) {
+    //   valid = true;
+    // } else {
+    //   form.className = 'invalid';
+    // }
+
+
+/**
+* Check if users firstname is valid.  Input is not empty and is at least 2
+* characters long. Not checking if the name is alphaNumeric as some people * have hyphenated or apostrophe's in names.
+*/
+  /**
+   * Assume that the form is valid if I don't want to do the final check at
+   * the end
+   */
+  //form.className = 'valid';
+
+
+
+  /**
+   * Check if users firstname is valid.  Input is not empty and is at least 2 * characters long.   Not checking if the name is alphaNumeric as some
+   * people have hyphenated or apostrophe's in names.
+   */
+  // if (validator.isEmpty(lastName)) {
+  //   form.className = 'invalid';
+  // } else {
+  //   valid = true;
+  // }
+  //
+  // if (validator.isOfLength(lastName, 2)) {
+  //   valid = true;
+  // } else {
+  //   form.className = 'invalid';
+  // }
+
+  /**
+   * Check if user email is valid. Input is not empty and email address is
+   * valid.
+   */
+  // if (validator.isEmpty(email)) {
+  //   form.className = 'invalid';
+  // } else {
+  //   valid = true;
+  // }
+  //
+  // if (validator.isEmailAddress(email)) {
+  //   valid = true;
+  // } else {
+  //   form.className = 'invalid';
+  // }
 
   /**
    * Check if user password is valid. Input is not empty and is at least 6-8
@@ -91,29 +179,29 @@ signupForm.addEventListener('click', function(event) {
     * empty, that the birthday is before today and that it computes to a
     * minimum age of 18.
     */
-    if (validator.isEmpty(birthdate)) {
-      form.className = 'invalid';
-    } else {
-      valid = true;
-    }
-
-    if (validator.isDate(birthdate)) {
-      valid = true;
-    } else {
-      form.className = 'invalid';
-    }
-
-    if (validator.isBeforeToday(birthdate)) {
-      valid = true;
-    } else {
-      form.className = 'invalid';
-    }
-
-    if (age >= 18) {
-      valid = true;
-    } else {
-      form.className = 'invalid';
-    }
+    // if (validator.isEmpty(birthdate)) {
+    //   form.className = 'invalid';
+    // } else {
+    //   valid = true;
+    // }
+    //
+    // if (validator.isDate(birthdate)) {
+    //   valid = true;
+    // } else {
+    //   form.className = 'invalid';
+    // }
+    //
+    // if (validator.isBeforeToday(birthdate)) {
+    //   valid = true;
+    // } else {
+    //   form.className = 'invalid';
+    // }
+    //
+    // if (age >= 18) {
+    //   valid = true;
+    // } else {
+    //   form.className = 'invalid';
+    // }
 
     /**
      * Checks that validation are valid.  If they are it sets the *

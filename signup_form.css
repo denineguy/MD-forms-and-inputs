@@ -10,7 +10,7 @@ body {
   padding: 40px 40px 40px 40px;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   width: 650px;
 }
 
@@ -27,7 +27,7 @@ label {
   margin-left: 10px;
   transform: translateY(-26px);
 }
-    
+
 .input {
   background-color: transparent;
   border: 2px solid #b5b5b5;
@@ -54,7 +54,7 @@ label {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #da6484 4%);
   background-position: -200px 100%;
   background-size: 0 100%;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   padding: 16px .5em 0 .5em;
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
@@ -63,7 +63,7 @@ label {
   width: 100%;
   color: #4F4F4F;
 }
-      
+
 .input:focus + .label-text {
   width: 100%;
   color: #da6484;
@@ -142,8 +142,60 @@ span {
   display: inline-block;
   margin: 0 2px;
   width: 49%;
+  padding: 4px 0;
 }
 
 label {
   display: block;
+}
+
+
+.firstname-error,
+.lastname-error,
+.email-error,
+.password-error {
+  background-color: rgba(235,200,214,.6);
+  bottom: 15px;
+  color: red;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  padding: 0 8px;
+  line-height: 14px;
+  border: 2px solid pink;
+  margin: 0;
+}
+
+.birthdate-error {
+  background-color: rgba(235,200,214,.6);
+  color: red;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  padding: 0 8px;
+  line-height: 14px;
+  border: 2px solid pink;
+  margin: 0;
+}
+
+input.invalid {
+  border: 2px solid red;
+  background-color: transparent;
+  color: gray;
+  font-size: 16px;
+  line-height: 30px;
+  height: 30px;
+  outline: 0;
+  padding: 0.5em;
+  transition: all 0.3s;
+  width: 100%;
+  padding: 16px .5em 0 .5em;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-right: 18px;
 }
