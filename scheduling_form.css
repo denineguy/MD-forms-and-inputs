@@ -280,3 +280,7 @@ footer {
 footer + span {
   color: #484CFF;
 }
+
+.invalid {
+  border: 1px solid red;
+}
