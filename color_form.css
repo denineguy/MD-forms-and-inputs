@@ -123,3 +123,60 @@ input[type=submit] {
   width: 80px;
   /*padding: 20px;*/
 }
+
+.rgb-container,
+.hsl-container,
+.hex-container {
+  margin: 0 auto;
+  width: 35%;
+  overflow: hidden;
+  position: relative;
+}
+
+.error,
+.hex-error {
+  color: white;
+  font-size: 12px;
+  background-color: red;
+  border: 1px solid pink;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  top: 767px;
+  left: 650px;
+}
+
+.rgb-error {
+  color: white;
+  font-size: 12px;
+  background-color: red;
+  border: 1px solid pink;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  top: 695px;
+  left: 650px;
+}
+
+.hsl-error {
+  color: white;
+  font-size: 12px;
+  background-color: red;
+  border: 1px solid pink;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  top: 725px;
+  left: 650px;
+}
+
+.apply[valid] {
+  background-color: green;
+}
+
+.apply[invalid] {
+  background-color: red;
+}

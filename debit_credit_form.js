@@ -1,112 +1,89 @@
 var creditCardForm = document.getElementById('submitCard');
-creditCardForm.addEventListener('click', function(event) {
+function checkForm(event) {
   event.preventDefault();
-  var name = document.getElementById('name').value;
-  var cardNumber = document.getElementById('card-number').value;
-  var csvCode = document.getElementById('csvcode').value;
-  var month = document.getElementById('month').value;
-  var year = document.getElementById('year').value;
+  var name = document.getElementById('name');
+  var cardNumber = document.getElementById('card-number');
+  var csvCode = document.getElementById('csvcode');
+  var month = document.getElementById('month');
+  var year = document.getElementById('year');
   var form = document.getElementById('form');
   var date = year + "-" + month;
-  var referenceDate = new Date(year, month, 0);
+  var referenceDate = new Date(year.value, month.value, 0);
   var valid;
   /**
-   * Assume that the form is valid if I don't want to do the final check at
-   * the end
+   * Check if users name is valid.  Input is not empty and is at least 4
+   * characters long and is at least 2 words. Not checking if the name is alphaNumeric as some people * have hyphenated or apostrophe's in names.
    */
-  //form.className = 'valid';
-
-  /**
-   * Check if users name is valid.  Input is not empty and is at least 2
-   * characters long. Not checking if the name is alphaNumeric as some people * have hyphenated or apostrophe's in names.
-   */
-  if (validator.isEmpty(name)) {
-    form.className = 'invalid';
+  if (!validator.isEmpty(name.value) && (validator.isOfLength(name.value, 4) && validator.moreWordsThan(name.value, 2))) {
+    name.setCustomValidity('');
+    name.className = 'input valid';
   } else {
-    valid = true;
-  }
-
-  if (validator.isOfLength(name, 2)) {
-    valid = true;
-  } else {
-    form.className = 'invalid';
-  }
-
-  if (validator.moreWordsThan(name, 1)) {
-    valid = true;
-  } else {
-    form.className = 'invalid';
+    name.setCustomValidity('full name is required and must be at least 2 characters');
+    name.className = 'input invalid';
   }
 
   /**
    * Check if users credit card is valid.  Input is not empty and is a valid
    * card number.
    */
-  if (validator.isEmpty(cardNumber)) {
-    form.className = 'invalid';
+  if (!validator.isEmpty(cardNumber.value) && validator.isCreditCard(cardNumber.value)) {
+    // form.className = 'invalid';
+    cardNumber.setCustomValidity('');
+    cardNumber.className = 'input valid';
   } else {
-    valid = true;
-  }
-
-  if (validator.isCreditCard(cardNumber, 2)) {
-    valid = true;
-  } else {
-    form.className = 'invalid';
+    // valid = true;
+    cardNumber.setCustomValidity('please provide a valid credit card number');
+    cardNumber.className = 'input invalid';
   }
 
   /**
    * Check if user csvCode is valid. Input is not empty and email address is
    * valid.
    */
-  if (validator.isEmpty(csvCode)) {
-    form.className = 'invalid';
+  if (!validator.isEmpty(csvCode.value) && validator.isNumber(csvCode.value) && ((validator.isOfLength(csvCode.value, 3)) && (validator.isLength(csvCode.value,3)))) {
+    csvCode.setCustomValidity('');
+    csvCode.className = 'input valid';
   } else {
-    valid = true;
-  }
-
-  if (validator.isNumber(csvCode)) {
-    valid = true;
-  } else {
-    form.className = 'invalid';
-  }
-
-  if ((validator.isOfLength(csvCode, 3)) && (validator.isLength(csvCode,4))) {
-    valid = true;
-  } else {
-    form.className = 'invalid';
+    csvCode.setCustomValidity('Please provide a valid csv code number');
+    csvCode.className = 'input invalid';
   }
 
   /**
    * Check if user month is valid. Input is not empty.
    */
-   if (validator.isEmpty(month)) {
-     form.className = 'invalid';
+   if (validator.isNumber(month.value)) {
+     month.setCustomValidity('');
+     month.className = 'valid';
    } else {
-     valid = true;
+     month.setCustomValidity('Please select a month');
+     month.className = 'invalid';
    }
 
    /**
     * Check if the year is valid. Input is not empty.
     */
-    if (validator.isEmpty(year)) {
-      form.className = 'invalid';
+    if (validator.isNumber(year.value)) {
+      year.setCustomValidity('');
+      year.className = 'valid';
     } else {
-      valid = true;
+      year.setCustomValidity('Please select a year');
+      year.className = 'invalid';
     }
 
     /**
      * Check if the date is valid. Input is a valid date and is not and is not expired (is Not After Today);
      */
-    if (validator.isDate(date)) {
-      valid = true;
-    } else {
-      form.className = 'invalid';
-    }
-
-    if (validator.isAfterToday(referenceDate)) {
-      valid = true;
-    } else {
-      form.className = 'invalid';
+    if (referenceDate != 'Invalid Date') {
+      var dateError = document.getElementById('date-error');
+      if (validator.isAfterToday(referenceDate)) {
+        month.setCustomValidity('');
+        month.className = 'valid';
+        year.className = 'valid';
+      } else {
+        month.setCustomValidity('The date must be in the future');
+        month.className = 'invalid';
+        year.className = 'invalid';
+      }
     }
 
     /**
@@ -116,7 +93,13 @@ creditCardForm.addEventListener('click', function(event) {
     if (!validator.isEmpty(name) && validator.isOfLength(name, 2) && validator.moreWordsThan(name, 1) && !validator.isEmpty(cardNumber) && validator.isCreditCard(cardNumber, 2) && !validator.isEmpty(csvCode) && validator.isNumber(csvCode) && (validator.isOfLength(csvCode, 3)) && (validator.isLength(csvCode,4)) && !validator.isEmpty(month) && !validator.isEmpty(year) && validator.isDate(date) && validator.isAfterToday(referenceDate)) {
         form.className = 'valid';
     }
-    //[TODO] [ADD CHECK FOR MININMUM AGE]
+    event.preventDefault();
+};
 
-    //Another way to do this is to set form.className = 'valid' at the top. and it will only flip when form.className = invalid. Then the above check to ensure every validation is valid is not needed.  The only reason I am not doing that is because I do not want to set the default value to "valid"
-});
+window.onload = function() {
+  document.getElementById('name').oninput = checkForm;
+  document.getElementById('card-number').oninput = checkForm;
+  document.getElementById('csvcode').oninput = checkForm;
+  document.getElementById('month').onchange = checkForm;
+  document.getElementById('year').onchange = checkForm;
+}

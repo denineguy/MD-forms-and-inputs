@@ -247,3 +247,11 @@ img {
   color: #E0A210;
   border: 6px double #E0A210;
 }
+
+.error {
+  visibility: hidden;
+}
+
+.invalid {
+  border: 2px solid red;
+}

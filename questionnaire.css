@@ -47,7 +47,7 @@ label {
 input[type="radio"]:checked + label {
   color: #fff;
   font-size: 20px
-} 
+}
 
 input[type="radio"]:checked + label::before {
   opacity: 0.8;
@@ -65,10 +65,87 @@ input[type="radio"]:checked + label::before {
   border-radius: 3px;
   letter-spacing: 1px;
   font-weight: bold;
-  font-size: 14px;  
+  font-size: 14px;
 }
 
 .submit:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+.error-container {
+  width: 20%;
+  display: inline-block;
+  float: left;
+  margin-right: 30px;
+}
+
+.error {
+  visibility: hidden;
+  border: 2px solid red;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-family: arial;
+  padding: 2px 0;
+  font-size: 14px;
+  display: block;
+  margin: 160px 0;
+  box-sizing: border-box;
+}
+
+.fruit-error {
+  border: 2px solid red;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-family: arial;
+  padding: 2px 0;
+  font-size: 14px;
+  display: block;
+  margin: 160px 0;
+  box-sizing: border-box;
+}
+
+.ice-cream-error {
+  border: 2px solid red;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-family: arial;
+  padding: 2px 0;
+  font-size: 14px;
+  display: block;
+  margin: 160px 0;
+  box-sizing: border-box;
+}
+
+.super-hero-error {
+  border: 2px solid red;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-family: arial;
+  padding: 2px 0;
+  font-size: 14px;
+  display: block;
+  margin: 160px 0;
+  box-sizing: border-box;
+}
+
+.soda-error {
+  border: 2px solid red;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-family: arial;
+  padding: 2px 0;
+  font-size: 14px;
+  display: block;
+  margin: 160px 0;
+  box-sizing: border-box;
 }

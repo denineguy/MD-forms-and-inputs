@@ -27,23 +27,33 @@
           <input type="range" class="input alpha"/>
           <div class="label-text">Alpha</div>
         </label>
-        <label class="color-input">
-          <div class="label-text format rgb">RGB</div>
-          <input type="text" class="input text" id="r"/>
-          <input type="text" class="input text" id="g"/>
-          <input type="text" class="input text" id="b"/>
-        </label>
-        <label class="color-input">
-          <div class="label-text format">HSL</div>
-          <input type="text" class="input text" id="h"/>
-          <input type="text" class="input text" id="s"/>
-          <input type="text" class="input text" id="l"/>
-        </label>
-        <label class="color-input hexcolor">
-          <div class="label-text format">HEX</div>
-          <input type="text" class="input text hex" id="hex"/>
-        </label>
-        <input type="submit" value="APPLY" class="submit" id="apply">
+        <div class="rgb-container">
+          <label class="color-input">
+            <div class="label-text format rgb">RGB</div>
+            <input type="text" class="input text" id="r"/>
+            <input type="text" class="input text" id="g"/>
+            <input type="text" class="input text" id="b"/>
+          </label>
+        </div>
+        <span id="rgb-error"></span>
+        <div class="hsl-container">
+          <label class="color-input">
+            <div class="label-text format">HSL</div>
+            <input type="text" class="input text" id="h"/>
+            <input type="text" class="input text" id="s"/>
+            <input type="text" class="input text" id="l"/>
+          </label>
+        </div>
+        <span id="hsl-error"></span>
+        <div class="hex-container">
+          <label class="color-input hexcolor">
+            <div class="label-text format">HEX</div>
+            <input type="text" class="input text hex" id="hex"/>
+          </label>
+          <input type="submit" value="APPLY" class="submit" id="apply">
+        </div>
+        <span id="error"></span>
+        <span id="hex-error"></span>
       </form>
     </div>
     <script src="validator.js" type="text/javascript"></script>

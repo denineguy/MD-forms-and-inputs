@@ -1,6 +1,9 @@
 var colorForm = document.getElementById('apply');
 colorForm.addEventListener('click', function (event) {
-  event.preventDefault();
+  var error = document.getElementById('error');
+  var rgbError = document.getElementById('rgb-error');
+  var hslError = document.getElementById('hsl-error');
+  var hexError = document.getElementById('hex-error');
   var red = document.getElementById('r').value;
   var green = document.getElementById('g').value;
   var blue = document.getElementById('b').value;
@@ -37,18 +40,24 @@ colorForm.addEventListener('click', function (event) {
    * Check if there is a RGB, HSL or hexadem value.
    */
   if (rgb || hsl || hex) {
-    valid = false;
+    error.innerHTML = '';
+    error.removeAttribute('class', 'error');
   } else {
-    form.className = 'invalid';
+    error.className = 'error';
+    error.innerHTML = 'You must provide a valid RGB, HSL or HEX value';
   }
+
   /**
    * Check if the input is a valid RGB input.
    */
   if (rgb) {
     if (validator.isRGB(rgb)) {
       isRGB = true;
+      rgbError.innerHTML = '';
+      rgbError.removeAttribute('class', 'rgb-error');
     } else {
-      form.className = 'invalid';
+      rgbError.className = 'rgb-error';
+      rgbError.innerHTML = 'You must provide a valid RGB value';
     }
   }
 
@@ -58,19 +67,25 @@ colorForm.addEventListener('click', function (event) {
   if (hsl) {
     if (validator.isHSL(hsl)) {
       isHSL = true;
+      hslError.innerHTML = '';
+      hslError.removeAttribute('class', 'hsl-error');
     } else {
-      form.className = 'invalid';
+      hslError.className = 'hsl-error';
+      hslError.innerHTML = 'You must provide a valid HSL value';
     }
   }
 
   /**
-   * Check if the input is a valid Hexadecimal input.
-   */
+  * Check if the input is a valid Hexadecimal input.
+  */
   if (hex) {
     if (validator.isHex(hexadem)) {
       isHex = true;
+      hexError.innerHTML = '';
+      hexError.removeAttribute('class', 'hex-error');
     } else {
-      form.className = 'invalid';
+      hexError.className = 'hex-error';
+      hexError.innerHTML = 'You must provide a valid Hex value';
     }
   }
 
@@ -79,12 +94,8 @@ colorForm.addEventListener('click', function (event) {
    */
   if (isRGB || isHSL || isHex) {
     form.className = 'valid';
-    return form.className;
   } else {
     form.className = 'invalid';
-    return form.className;
   }
-
-  //For this validation I did not use the isColor validation because of how I am
-  //collecting my inputs
+  event.preventDefault();
 });
