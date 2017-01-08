@@ -199,3 +199,43 @@ input.invalid {
   display: inline-block;
   margin-right: 18px;
 }
+
+input.valid {
+  border: 2px solid green;
+  position: relative;
+}
+
+span#first.valid,
+span#last.valid,
+span#email-msg.valid,
+span#password-msg.valid,
+span#birthday-msg.valid {
+  color: green;
+  position: absolute;
+  width: 1em;
+}
+
+span#first.valid {
+  left: 44%;
+  bottom: 69%;
+}
+
+span#last.valid {
+  right: 8%;
+  bottom: 69%;
+}
+
+span#email-msg.valid {
+  right: 8%;
+  bottom: 55%;
+}
+
+span#password-msg.valid {
+  right: 8%;
+  bottom: 41%;
+}
+
+span#birthday-msg.valid {
+  right: 8%;
+  bottom: 29%;
+}
