@@ -96,9 +96,11 @@ input[type="radio"]:checked + label::before {
 }
 
 .fruit-error {
-  border: 2px solid red;
   border-radius: 3px;
-  background-color: red;
+  background: linear-gradient(#ff0000, #FF5252);
+  background: -webkit-linear-gradient(#ff0000, #FF5252);
+  background: -moz-linear-gradient(#ff0000, #FF5252);
+  background: -o-linear-gradient(#ff0000, #FF5252);
   color: white;
   text-align: center;
   font-family: arial;
@@ -106,13 +108,50 @@ input[type="radio"]:checked + label::before {
   font-size: 14px;
   display: block;
   margin: 160px 0;
-  box-sizing: border-box;
+  padding: 5px 0;
+}
+
+
+
+.fruit-error:after,
+.ice-cream-error:after,
+.super-hero-error:after,
+.soda-error:after {
+  background: linear-gradient(top left, #ff0000, #FF5252);
+  background: -webkit-linear-gradient(top left, #ff0000, #FF5252);
+  background: -moz-linear-gradient(top left, #ff0000, #FF5252);
+  background: -o-linear-gradient(top left, #ff0000, #FF5252);
+  content: '';
+  display: block;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+   z-index: -1;
+   position: absolute;
+}
+
+.fruit-error:after {
+  top: 195px;
+  left: 199px;
+  width: 16px;
+  height: 16px;
+}
+
+.ice-cream-error:after {
+  top: 381px;
+  left: 199px;
+  width: 16px;
+  height: 16px;
 }
 
 .ice-cream-error {
-  border: 2px solid red;
   border-radius: 3px;
-  background-color: red;
+  background: linear-gradient(#ff0000, #FF5252);
+  background: -webkit-linear-gradient(#ff0000, #FF5252);
+  background: -moz-linear-gradient(#ff0000, #FF5252);
+  background: -o-linear-gradient(#ff0000, #FF5252);
   color: white;
   text-align: center;
   font-family: arial;
@@ -121,12 +160,15 @@ input[type="radio"]:checked + label::before {
   display: block;
   margin: 160px 0;
   box-sizing: border-box;
+  padding: 5px 0;
 }
 
 .super-hero-error {
-  border: 2px solid red;
   border-radius: 3px;
-  background-color: red;
+  background: linear-gradient(#ff0000, #FF5252);
+  background: -webkit-linear-gradient(#ff0000, #FF5252);
+  background: -moz-linear-gradient(#ff0000, #FF5252);
+  background: -o-linear-gradient(#ff0000, #FF5252);
   color: white;
   text-align: center;
   font-family: arial;
@@ -135,11 +177,22 @@ input[type="radio"]:checked + label::before {
   display: block;
   margin: 160px 0;
   box-sizing: border-box;
+  padding: 5px 0;
+}
+
+.super-hero-error:after {
+  top: 567px;
+  left: 199px;
+  width: 16px;
+  height: 16px;
 }
 
 .soda-error {
-  border: 2px solid red;
-  background-color: red;
+  border-radius: 3px;
+  background: linear-gradient(#ff0000, #FF5252);
+  background: -webkit-linear-gradient(#ff0000, #FF5252);
+  background: -moz-linear-gradient(#ff0000, #FF5252);
+  background: -o-linear-gradient(#ff0000, #FF5252);
   color: white;
   text-align: center;
   font-family: arial;
@@ -148,4 +201,12 @@ input[type="radio"]:checked + label::before {
   display: block;
   margin: 160px 0;
   box-sizing: border-box;
+  padding: 5px 0;
+}
+
+.soda-error:after {
+  top: 753px;
+  left: 199px;
+  width: 16px;
+  height: 16px;
 }
